@@ -45,6 +45,7 @@ This project answers the following business questions:
 - Power BI
 - Markdown
 - PyCharm
+- GitHub
 
 ---
 
@@ -138,6 +139,7 @@ Main cleaning steps:
 - Renamed columns into readable business names
 - Filled missing employment length values
 - Filled missing interest rate values
+- Removed unrealistic values
 - Created unique `loan_id`
 - Created readable default status fields
 - Validated missing values and duplicates
@@ -216,6 +218,8 @@ This means that approximately one out of five loans resulted in default.
 
 ### 2. Risk Level Strongly Separates Borrowers
 
+Default rate by risk level:
+
 | Risk Level | Default Rate |
 |---|---:|
 | Low Risk | 5.57% |
@@ -225,9 +229,13 @@ This means that approximately one out of five loans resulted in default.
 
 Very High Risk borrowers defaulted at a rate of **74.19%**, while Low Risk borrowers defaulted at only **5.57%**.
 
+This confirms that the rule-based risk score successfully separates safer and riskier borrower groups.
+
 ---
 
 ### 3. Loan Grade Is a Strong Risk Indicator
+
+Default rate increases sharply for lower loan grades.
 
 | Loan Grade | Default Rate |
 |---|---:|
@@ -245,6 +253,8 @@ Grades D, E, F, and G represent very high-risk loan categories.
 
 ### 4. Low Income Borrowers Have Higher Default Risk
 
+Low Income borrowers show the highest default rate.
+
 | Income Segment | Default Rate |
 |---|---:|
 | Low Income | 45.59% |
@@ -253,7 +263,7 @@ Grades D, E, F, and G represent very high-risk loan categories.
 | High Income | 11.96% |
 | Upper-Mid Income | 9.27% |
 
-Low Income borrowers show the highest default rate.
+This suggests that lower-income borrowers require more careful credit assessment, especially when combined with high DTI, poor loan grade, or previous default history.
 
 ---
 
@@ -263,17 +273,23 @@ Borrowers with higher loan-to-income ratios have significantly higher default ra
 
 Very High DTI and High DTI segments are the riskiest groups.
 
+This means that the relationship between loan size and borrower income should be a key part of loan approval decisions.
+
 ---
 
 ### 6. Previous Default History Matters
 
 Borrowers with previous defaults show much higher default risk compared with borrowers without previous default records.
 
+Previous default history should be used as an important risk indicator in credit decision-making.
+
 ---
 
 ### 7. Home Ownership Shows Clear Risk Differences
 
 Renters show higher default risk than borrowers with mortgage or owned property.
+
+Home ownership status can be used as a supporting risk indicator in borrower assessment.
 
 ---
 
@@ -282,6 +298,8 @@ Renters show higher default risk than borrowers with mortgage or owned property.
 Borrowers with shorter employment history have higher default rates.
 
 The highest risk is observed among borrowers with 0–1 years of employment history.
+
+This indicates that job stability is an important borrower quality indicator.
 
 ---
 
@@ -405,6 +423,18 @@ Recommended actions:
 - Tighten approval rules for grades D–G
 - Apply maximum DTI thresholds
 - Combine grade, income, and DTI in risk policy
+
+---
+
+### 5. Monitor risky loan purposes
+
+Some loan purposes show higher default risk than others.
+
+Recommended actions:
+
+- Monitor risky loan categories separately
+- Apply additional checks for high-risk purposes
+- Adjust approval rules based on purpose-level risk
 
 ---
 
