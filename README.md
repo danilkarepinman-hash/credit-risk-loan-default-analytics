@@ -70,11 +70,245 @@ Raw dataset:
 ```text
 data/raw/loans_raw.csv
 ```
-Raw dataset:
+
+Processed datasets:
 
 ```text
-data/raw/loans_raw.csv
+data/processed/loans_cleaned.csv
+data/processed/loans_featured.csv
+data/processed/credit_risk.db
 ```
+
+---
+
+## Project Structure
+
+```text
+credit-risk-loan-default-analytics/
+│
+├── data/
+│   ├── raw/
+│   │   └── loans_raw.csv
+│   │
+│   └── processed/
+│       ├── loans_cleaned.csv
+│       ├── loans_featured.csv
+│       └── credit_risk.db
+│
+├── notebooks/
+│   ├── 01_data_cleaning.py
+│   ├── 02_feature_engineering.py
+│   ├── 03_validate_dataset.py
+│   ├── 04_basic_eda.py
+│   └── 05_create_sqlite_database.py
+│
+├── sql/
+│   ├── 01_portfolio_overview.sql
+│   ├── 02_default_analysis.sql
+│   ├── 03_segment_analysis.sql
+│   └── 04_risk_recommendations.sql
+│
+├── reports/
+│   ├── business_insights.md
+│   ├── data_dictionary.md
+│   └── eda_outputs/
+│
+├── powerbi/
+│   ├── credit_risk_dashboard.pbix
+│   └── screenshots/
+│       ├── 01_credit_portfolio_overview.png
+│       ├── 02_default_risk_analysis.png
+│       ├── 03_borrower_segments.png
+│       └── 04_high_risk_borrowers.png
+│
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Data Cleaning
+
+Data cleaning was performed in Python using pandas.
+
+Main cleaning steps:
+
+- Loaded raw loan dataset
+- Removed duplicate rows
+- Renamed columns into readable business names
+- Filled missing employment length values
+- Filled missing interest rate values
+- Created unique `loan_id`
+- Created readable default status fields
+- Validated missing values and duplicates
+
+Final cleaned dataset:
+
+```text
+data/processed/loans_cleaned.csv
+```
+
+---
+
+## Feature Engineering
+
+Several analytical features were created to support credit risk analysis.
+
+Created segments:
+
+- Age group
+- Income segment
+- Loan amount segment
+- Interest rate segment
+- Loan-to-income segment
+- Credit history segment
+- Employment length segment
+
+A rule-based risk score was created using:
+
+- Loan grade
+- Interest rate
+- Loan-to-income ratio
+- Previous default history
+- Income level
+
+The final risk score was grouped into four risk levels:
+
+| Risk Level | Description |
+|---|---|
+| Low Risk | Safer borrowers |
+| Medium Risk | Moderate risk borrowers |
+| High Risk | Risky borrowers |
+| Very High Risk | Highest-risk borrowers |
+
+Final featured dataset:
+
+```text
+data/processed/loans_featured.csv
+```
+
+---
+
+## Key Metrics
+
+| Metric | Value |
+|---|---:|
+| Total Loans | 32,411 |
+| Total Loan Amount | 310.94M |
+| Defaulted Loans | 7,089 |
+| Defaulted Loan Amount | 76.97M |
+| Default Rate | 21.87% |
+| Average Loan Amount | 9.59K |
+| Average Interest Rate | 11.02% |
+| Average Risk Score | 33.84 |
+
+---
+
+## Main Findings
+
+### 1. Overall Default Rate
+
+The overall portfolio default rate is **21.87%**.
+
+This means that approximately one out of five loans resulted in default.
+
+---
+
+### 2. Risk Level Strongly Separates Borrowers
+
+| Risk Level | Default Rate |
+|---|---:|
+| Low Risk | 5.57% |
+| Medium Risk | 30.62% |
+| High Risk | 51.37% |
+| Very High Risk | 74.19% |
+
+Very High Risk borrowers defaulted at a rate of **74.19%**, while Low Risk borrowers defaulted at only **5.57%**.
+
+---
+
+### 3. Loan Grade Is a Strong Risk Indicator
+
+| Loan Grade | Default Rate |
+|---|---:|
+| A | 9.96% |
+| B | 16.32% |
+| C | 20.76% |
+| D | 59.06% |
+| E | 64.49% |
+| F | 70.54% |
+| G | 98.44% |
+
+Grades D, E, F, and G represent very high-risk loan categories.
+
+---
+
+### 4. Low Income Borrowers Have Higher Default Risk
+
+| Income Segment | Default Rate |
+|---|---:|
+| Low Income | 45.59% |
+| Lower-Mid Income | 23.76% |
+| Mid Income | 13.38% |
+| High Income | 11.96% |
+| Upper-Mid Income | 9.27% |
+
+Low Income borrowers show the highest default rate.
+
+---
+
+### 5. Loan-to-Income Ratio Is a Key Risk Driver
+
+Borrowers with higher loan-to-income ratios have significantly higher default rates.
+
+Very High DTI and High DTI segments are the riskiest groups.
+
+---
+
+### 6. Previous Default History Matters
+
+Borrowers with previous defaults show much higher default risk compared with borrowers without previous default records.
+
+---
+
+### 7. Home Ownership Shows Clear Risk Differences
+
+Renters show higher default risk than borrowers with mortgage or owned property.
+
+---
+
+### 8. Employment Length Affects Default Risk
+
+Borrowers with shorter employment history have higher default rates.
+
+The highest risk is observed among borrowers with 0–1 years of employment history.
+
+---
+
+## SQL Analysis
+
+SQL analysis was performed using SQLite and DBeaver.
+
+SQL files:
+
+```text
+sql/01_portfolio_overview.sql
+sql/02_default_analysis.sql
+sql/03_segment_analysis.sql
+sql/04_risk_recommendations.sql
+```
+
+The SQL analysis covers:
+
+- Portfolio overview
+- Default rate analysis
+- Borrower segment analysis
+- Risk level analysis
+- Loan grade analysis
+- Risk-based recommendations
+- High-risk borrower identification
+
+---
 
 ## Power BI Dashboard
 
