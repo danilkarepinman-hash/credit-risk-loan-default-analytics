@@ -69,3 +69,121 @@ Raw dataset:
 
 ```text
 data/raw/loans_raw.csv
+
+## Power BI Dashboard
+
+The Power BI dashboard contains four pages:
+
+1. Credit Portfolio Overview
+2. Default Risk Analysis
+3. Borrower Segments
+4. High Risk Borrowers
+
+Power BI file:
+
+```text
+powerbi/credit_risk_dashboard.pbix
+```
+
+---
+
+## Dashboard Screenshots
+
+### 1. Credit Portfolio Overview
+
+![Credit Portfolio Overview](./powerbi/screenshots/01_credit_portfolio_overview.png)
+
+---
+
+### 2. Default Risk Analysis
+
+![Default Risk Analysis](./powerbi/screenshots/02_default_risk_analysis.png)
+
+---
+
+### 3. Borrower Segments
+
+![Borrower Segments](./powerbi/screenshots/03_borrower_segments.png)
+
+---
+
+### 4. High Risk Borrowers
+
+![High Risk Borrowers](./powerbi/screenshots/04_high_risk_borrowers.png)
+
+---
+
+## Business Recommendations
+
+### 1. Apply strict manual review for Very High Risk borrowers
+
+Very High Risk borrowers have a default rate of **74.19%**.
+
+Recommended actions:
+
+- Reject automatically in many cases
+- Require manual credit review
+- Request additional documentation
+- Reduce approved loan amount
+- Apply stricter DTI limits
+
+---
+
+### 2. Add stronger controls for High Risk borrowers
+
+High Risk borrowers have a default rate of **51.37%**.
+
+Recommended actions:
+
+- Approve only with stronger controls
+- Review income stability
+- Check previous default history
+- Limit loan size
+- Monitor repayment behavior more closely
+
+---
+
+### 3. Prioritize Low Risk borrowers
+
+Low Risk borrowers have a default rate of only **5.57%**.
+
+Recommended actions:
+
+- Treat as preferred lending segment
+- Offer faster approval
+- Use for portfolio growth
+- Consider better pricing or cross-sell opportunities
+
+---
+
+### 4. Use loan grade and DTI as key approval signals
+
+Loan grade and loan-to-income ratio are among the strongest default risk indicators.
+
+Recommended actions:
+
+- Tighten approval rules for grades D–G
+- Apply maximum DTI thresholds
+- Combine grade, income, and DTI in risk policy
+
+---
+
+## Final Conclusion
+
+This project demonstrates an end-to-end credit risk analytics workflow.
+
+The analysis shows that loan default risk is strongly connected with:
+
+- Loan grade
+- Borrower income
+- Interest rate
+- Loan-to-income ratio
+- Previous default history
+- Home ownership
+- Employment length
+
+The rule-based risk score successfully separates borrowers into meaningful risk groups.
+
+The most important finding is that Very High Risk borrowers default at **74.19%**, while Low Risk borrowers default at only **5.57%**.
+
+This project shows how Python, SQL, and Power BI can be used together to clean financial data, create analytical risk segments, identify high-risk borrowers, and support data-driven credit decision-making.
