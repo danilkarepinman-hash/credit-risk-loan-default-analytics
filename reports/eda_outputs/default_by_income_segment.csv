@@ -1,0 +1,6 @@
+income_segment,total_loans,defaulted_loans,total_loan_amount,defaulted_loan_amount,avg_loan_amount,avg_interest_rate,avg_risk_score,default_rate
+Low Income,4486,2045,24465525,12776875,5453.75,11.27,44.78,45.59
+Lower-Mid Income,14136,3359,119142150,37227575,8428.28,11.03,33.3,23.76
+Mid Income,9601,1285,107551025,19879725,11202.06,10.87,30.98,13.38
+High Income,443,53,7767375,1114650,17533.58,11.98,34.53,11.96
+Upper-Mid Income,3745,347,52011825,5969850,13888.34,10.96,30.02,9.27

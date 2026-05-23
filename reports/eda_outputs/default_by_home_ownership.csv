@@ -1,0 +1,5 @@
+home_ownership,total_loans,defaulted_loans,total_loan_amount,defaulted_loan_amount,avg_loan_amount,avg_interest_rate,avg_risk_score,default_rate
+Rent,16375,5177,145164750,55760825,8865.02,11.46,36.65,31.62
+Other,106,33,1168975,442075,11028.07,12.13,41.42,31.13
+Mortgage,13367,1687,141457475,19472350,10582.59,10.5,30.12,12.62
+Own,2563,192,23146700,1293425,9031.1,10.87,35.01,7.49

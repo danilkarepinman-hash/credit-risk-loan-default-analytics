@@ -1,0 +1,6 @@
+employment_length_segment,total_loans,defaulted_loans,total_loan_amount,defaulted_loan_amount,avg_loan_amount,avg_interest_rate,avg_risk_score,default_rate
+0-1 Years,6983,1946,61416500,19047400,8795.15,11.27,35.98,27.87
+2-3 Years,7273,1682,67576775,17868675,9291.46,11.22,34.83,23.13
+4-5 Years,6674,1437,61798450,14946750,9259.58,10.9,33.58,21.53
+6-10 Years,8564,1550,87947475,18800000,10269.44,10.84,32.3,18.1
+10+ Years,2917,474,32198700,6305850,11038.29,10.73,31.4,16.25

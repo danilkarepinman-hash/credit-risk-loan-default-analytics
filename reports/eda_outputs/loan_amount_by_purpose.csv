@@ -1,0 +1,7 @@
+loan_purpose,total_loans,total_loan_amount,avg_loan_amount,default_rate
+Education,6409,60750200,9478.89,17.26
+Medical,6042,56018875,9271.58,26.76
+Venture,5680,54421500,9581.25,14.86
+Personal,5497,52664100,9580.52,19.9
+Debtconsolidation,5189,49841750,9605.27,28.68
+Homeimprovement,3594,37241475,10362.12,26.15

@@ -1,0 +1,5 @@
+risk_level,total_loans,defaulted_loans,total_loan_amount,defaulted_loan_amount,avg_loan_amount,avg_interest_rate,avg_risk_score,default_rate
+Very High Risk,1333,989,18723450,13583825,14046.1,16.92,88.43,74.19
+High Risk,4242,2179,47785900,23831650,11264.95,14.96,63.98,51.37
+Medium Risk,9685,2966,96038500,32431925,9916.21,12.11,40.05,30.62
+Low Risk,17151,955,148390050,7121275,8651.98,8.97,18.64,5.57

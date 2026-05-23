@@ -1,0 +1,9 @@
+metric,value
+total_loans,32411.0
+total_loan_amount,310937900.0
+defaulted_loans,7089.0
+defaulted_loan_amount,76968675.0
+default_rate_pct,21.87
+average_loan_amount,9593.59
+average_interest_rate,11.02
+average_risk_score,33.84

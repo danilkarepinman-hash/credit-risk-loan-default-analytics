@@ -1,0 +1,6 @@
+loan_to_income_segment,total_loans,defaulted_loans,total_loan_amount,defaulted_loan_amount,avg_loan_amount,avg_interest_rate,avg_risk_score,default_rate
+Very High DTI,247,194,4605875,3516225,18647.27,11.63,56.66,78.54
+High DTI,3572,2496,55698975,36760200,15593.22,11.66,50.09,69.88
+Medium DTI,6166,1358,80049425,15795350,12982.39,11.55,39.65,22.02
+Low DTI,11999,1815,115786800,15247450,9649.7,10.94,30.6,15.13
+Very Low DTI,10427,1226,54796825,5649450,5255.28,10.57,28.04,11.76

@@ -1,0 +1,6 @@
+credit_history_segment,total_loans,defaulted_loans,total_loan_amount,defaulted_loan_amount,avg_loan_amount,avg_interest_rate,avg_risk_score,default_rate
+Very Long History,212,55,2082725,699775,9824.17,11.31,34.48,25.94
+Very Short History,11827,2725,109782050,28543800,9282.32,10.99,34.02,23.04
+Short History,9604,2088,92035825,22460600,9583.07,10.99,33.75,21.74
+Long History,3243,670,32446800,7758950,10005.18,11.15,34.33,20.66
+Medium History,7525,1551,74590500,17505550,9912.36,11.04,33.45,20.61
